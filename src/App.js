@@ -2,7 +2,7 @@ import React from 'react';
 import { Route, BrowserRouter as Router, Switch } from 'react-router-dom'
 import Api from './components/api';
 import AxiosApi from './components/axiosApi';
-import HomePage from './components/hmePage';
+import HomePage from './components/homePage';
 import Post from './components/Post';
 const App = () => {
   return (

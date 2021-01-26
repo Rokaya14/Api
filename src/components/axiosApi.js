@@ -4,12 +4,12 @@ class AxiosApi extends Component {
   state = {
     persons: []
   }
-  componentDidMount() {
-    axios.get(`https://jsonplaceholder.typicode.com/users`)
-      .then(res => {
-        const persons = res.data;
-        this.setState({ persons })
-      })
+  async componentDidMount() {
+    const res = await axios.get(`https://jsonplaceholder.typicode.com/users`)
+
+    const persons = await res.data;
+    this.setState({ persons })
+
   }
   render() {
     return (

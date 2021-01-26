@@ -8,19 +8,19 @@ class Post extends Component {
     this.setState({ name: e.target.value })
   }
 
-  handelSubmit = (e) => {
+  handelSubmit = async (e) => {
     e.preventDefault();
     const user = { name: this.state.name }
-    axios.post(`https://jsonplaceholder.typicode.com/users`, { user })
-      .then(res => {
-        console.log(res);
-        console.log(res.data);
-      })
+    const res = await axios.post(`https://jsonplaceholder.typicode.com/users`, { user })
+    console.log(res);
+    console.log(res.data);
+
   }
 
   render() {
     return (
       <div className="container mt-4">
+        <h1>POST</h1>
         <form onSubmit={this.handelSubmit}>
           <div className="row" >
             <input
@@ -31,6 +31,7 @@ class Post extends Component {
             <button className="col-2 offset-1 btn btn-info">Submit</button>
           </div>
         </form>
+
       </div>
     );
   }
