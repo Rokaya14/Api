@@ -14,6 +14,9 @@ const HomePage = () => {
         <li>
           <Link to="/post">post api</Link>
         </li>
+        <li>
+          <Link to="/delete">Delete api</Link>
+        </li>
       </ul>
     </div>
   );
