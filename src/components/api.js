@@ -12,12 +12,14 @@ class Api extends Component {
   render() {
     return (
       <div className="container">
+        <h1>Fetch </h1>
         <ul>
-          {this.state.data.map((element, index) => <li key={index}>{element.name}</li>
-          )
+          {
+            this.state.data.map((element, index) => {
+              return <li key={index}>{element.name}</li>
+            }
+            )}
 
-          }
-          {/* <li>{this.state.data.name}</li> */}
         </ul>
       </div>
     );
