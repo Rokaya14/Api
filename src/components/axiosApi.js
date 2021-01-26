@@ -6,7 +6,6 @@ class AxiosApi extends Component {
   }
   async componentDidMount() {
     const res = await axios.get(`https://jsonplaceholder.typicode.com/users`)
-
     const persons = await res.data;
     this.setState({ persons })
 
